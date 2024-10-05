@@ -1,0 +1,32 @@
+<HTML>
+    <HEADER>
+        <script src="js/lib/jsQR.js"></script>
+        <script src="js/QRConverter.js"></script>
+        <link rel="stylesheet" href="css/qrcode.css" type="text/css">
+    </HEADER>
+    <BODY>
+        <!-- Reader -->
+        <div class="title"> QRCodeReader </div><p/>
+        <div class="menu"><b><u>Ctrl+V</u></b> or <input type="file" id="file"></div><p/>
+
+        <table class="canvas">
+            <tr><td><canvas id="canvas" aria-valuetext="a"/></td></tr>
+        </table>
+
+        <table>
+            <td class="outputText"><div id="outputText"> https://www.google.com/ </div></td>
+            <td><button id="copyButton">Copy</button></td>
+        </table><p/>
+
+        <hr/>
+
+        <!-- Writer 
+        <div class="title">QRCodeWriter</div><p/>
+        <div>
+            <input type="text" id="inputText" >
+            <button type="createQRButton">Create QRcode</button>   
+        </div>
+        <canvas id="canvas2"></canvas>
+        -->
+    </BODY>
+</HTML>
