@@ -2,14 +2,15 @@
 
 This project is Coverting QRCode-image to Text.
 
-it use only html and js, without DB, API.
+use only html and js, without DB, API.
 
-## URL
+## test-page
 
 https://nankajp.github.io/qrcode/
 
 
-## Library
+
+## external Library
 
 * jsQR
 
