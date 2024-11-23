@@ -1,22 +1,49 @@
+/* comon ------------------------- */
 .title {
     font-weight: bold; 
-    font-size: 30px; /* テキストサイズ */
-    margin: 10px auto; /* 中央配置 */
+    font-size: 30px;
+    margin: 10px auto;
 }
 
-.menu {
+.button {
+    padding: 5px;
 }
 
-.canvas {
+
+/* Generator --------------------- */
+.inputText {
+    padding : 5px 30px 5px 15px;
+    font-size: 12px;
+    width: 30%;
+}
+
+input::placeholder {
+    color: #aaa;
+    font-size: 14px;
+    font-style: italic;
+    opacity: 1;
+}
+
+
+/* Reader ------------------------ */
+#canvas {
     background-color:#eeeeee;
+    width: 50px;
+    height: 50px;
 }
 
 .outputText {
     padding : 5px 30px 5px 15px;
     background-color:#eeeeee;
-    display: flex;
-    align-items: center;
+    font-size: 12px;
+    width: 30%;
+}
+
+
+/* Footer ------------------------ */
+.footer {
+    font-size: 10px;
+    text-align: center;
     justify-content: center;
-    font-size: 18px; /* テキストサイズ */
-    margin: 10px auto; /* 中央配置 */
+    align-items: center;
 }

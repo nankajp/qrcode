@@ -1,32 +1,42 @@
 <HTML>
     <HEADER>
-        <script src="https://cdn.jsdelivr.net/npm/jsqr@latest/dist/jsQR.min.js"></script>
         <script src="js/QRConverter.js"></script>
+        <script src="js/jsQR.js"></script>
+        <script src="js/qrcode.min.js"></script>
         <link rel="stylesheet" href="css/qrcode.css" type="text/css">
     </HEADER>
     <BODY>
-        <!-- Reader -->
-        <div class="title"> QRCodeReader </div><p/>
-        <div class="menu"><b><u>Ctrl+V</u></b> or <input type="file" id="file"></div><p/>
-
-        <table class="canvas">
-            <tr><td><canvas id="canvas" aria-valuetext="a"/></td></tr>
-        </table>
-
-        <table>
-            <td class="outputText"><div id="outputText"> https://www.google.com/ </div></td>
-            <td><button id="copyButton">Copy</button></td>
-        </table><p/>
-
-        <hr/>
-
-        <!-- Writer 
-        <div class="title">QRCodeWriter</div><p/>
+        <!-- Generator -->
         <div>
-            <input type="text" id="inputText" >
-            <button type="createQRButton">Create QRcode</button>   
+            <div class="title">QRCode Generator</div>
+            <div>
+                <input id="inputText" type="text" class="inputText" placeholder="https://www.google.com" />
+                <button id="generateQRButton" class="button">Generate</button>
+                <button id="clearInputTextButton" class="button">Clear</button>
+            </div>
+            <table>
+                <td style="padding: 30px;">
+                    <div id="qrcode"></div>
+                </td>
+            </table>
         </div>
-        <canvas id="canvas2"></canvas>
-        -->
+        <hr/><p>
+
+        <!-- Reader -->
+        <div>
+            <div class="title"> QRCode Reader </div>
+            <div class="menu"><b><u>Ctrl+V</u></b> or <input type="file" id="file"></div><br>
+
+            <div><canvas id="canvas"/></div><br>
+
+            <input id="outputText" type="text" class="outputText" value="" />
+            <button id="copyButton" class="button">Copy to Clipboard</button>
+        </div>
+
+        <!-- Footer -->
+        <hr/><p>
+        <div class="footer">
+            see <a href="https://github.com/nankajp/qrcode">https://github.com/nankajp/qrcode</a>
+        </div>
     </BODY>
 </HTML>

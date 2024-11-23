@@ -3,6 +3,21 @@
  */
 window.onload = function() {
 
+    // QRCode Generator ---------------------------------------------------------------
+    // QR-GenerateButton Event
+    document.getElementById('generateQRButton').addEventListener('click', () => {
+        document.getElementById("qrcode").innerHTML = "";
+
+        var qrcode = new QRCode("qrcode");       
+        qrcode.makeCode(document.getElementById("inputText").value);
+    });
+
+    // clearInputTextButton Event
+    document.getElementById('clearInputTextButton').addEventListener('click', () => {
+        document.getElementById("inputText").value = "";
+    });
+
+    // QRCode Reader ------------------------------------------------------------------
     // ImageFile-Change Event
     document.getElementById('file').addEventListener("change", function(e){
         var reader = new FileReader();
@@ -29,10 +44,18 @@ window.onload = function() {
         }
     });
 
-    // URL-Copy Event
+    // URL-CopyButton Event
     document.getElementById('copyButton').addEventListener('click', () => {
-        navigator.clipboard.writeText(document.getElementById("outputText").innerText);
+        navigator.clipboard.writeText(document.getElementById("outputText").value);
     });
+
+    // --------------------------------------------------------------------------------
+    // set default CANVAS.
+    var canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    ctx.font = '70px bold Arial';
+    ctx.fillStyle = 'black';
+    ctx.fillText('Here !!', 30, 100);
 };
 
 /**
@@ -58,6 +81,6 @@ function convertQRtoText(imageDataURL){
             inversionAttempts: "dontInvert", // see jsQR documentaion...
         });
 
-        document.getElementById("outputText").innerText = code.data;
+        document.getElementById("outputText").value = code.data;
     }
 }
